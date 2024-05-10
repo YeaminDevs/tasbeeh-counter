@@ -110,7 +110,9 @@ public class MainActivity extends AppCompatActivity {
         subButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter--;
+                if (counter > 0){
+                    counter--;
+                }
                 counterTextView.setText("" + counter);
                 editor.putInt("counter", counter);
                 editor.apply();
